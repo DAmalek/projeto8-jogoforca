@@ -19,6 +19,7 @@ let forca = [forca0,forca1,forca2,forca3,forca4,forca5,forca6];
 const alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
 function App() {
+  const [pesquisa, setPesquisa] = useState("")
   const [desativar, setDesativar] = useState(true)
   const [palavraJogo, setPalavraJogo] = useState("")
   const [clicked, setClicked] = useState("")
@@ -63,10 +64,29 @@ function App() {
     if (aux1 === aux2){
       setPalavraJogo("");      
       setDesativar(true);
-      
     }
+
     setClicked(escolha);
     
+  }
+
+  function testeInput(){
+    if (pesquisa === palavraJogo.join("")){
+      setPalavraJogo("");      
+      setDesativar(true);
+      setClicked(palavraJogo)
+      setPesquisa("")
+      return
+    }
+    if (pesquisa !== palavraJogo.join("")){
+      setPalavraJogo("");      
+      setDesativar(true);
+      setContador(6)
+      setClicked(palavraJogo)
+      setPesquisa("")
+      return
+    }
+
   }
 
   function LetraDoAlfabeto({value, jogo, desativarTodos, palavraJogo}){
@@ -97,13 +117,22 @@ function App() {
         </div>
         <div className="alfabeto">
           {alfabeto.map((value, index) => (
-            <LetraDoAlfabeto key={index} value={value} jogo={jogo} desativarTodos={desativar} palavraJogo={palavraJogo}/>
+            <LetraDoAlfabeto
+              key={index}
+              value={value}
+              jogo={jogo}
+              desativarTodos={desativar}
+              palavraJogo={palavraJogo}
+            />
           ))}
         </div>
         <div className="input">
           <h5>Ja sei a palavra!!</h5>
-          <input type="text" />
-          <button>Chutar</button>
+          <input
+            type="text"
+            onChange={(event) => setPesquisa(event.target.value)}
+          />
+          <button onClick={()=>testeInput()}>Chutar</button>
         </div>
       </div>
     </>

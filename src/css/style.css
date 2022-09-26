@@ -9,13 +9,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: cornflowerblue;
 }
 
 .input {
     display: flex;
     justify-content: space-evenly;
-    background-color: brown;
+   
 }
 .image{
     margin: 25px;
@@ -26,7 +25,7 @@
 
 .container {
     display: flex;
-    background-color: bisque;
+    
 
     
 }
@@ -36,7 +35,7 @@
     flex-direction: column;
     justify-content: space-around;
     margin-left: 160px;
-    background-color: aquamarine;
+    
 }
 .lateral button {
     margin-bottom: 440px;
@@ -49,7 +48,7 @@
 .alfabeto {
     margin: 10px 0;
     width: 660px;
-    background-color: blueviolet;
+    
 }
 
 .alfabeto button {
