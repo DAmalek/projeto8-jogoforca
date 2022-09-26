@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: cornflowerblue;
+}
+
+.input {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: brown;
+}
+.image{
+    margin: 25px;
+    width: 600px;
+   
+}
+
+
+.container {
+    display: flex;
+    background-color: bisque;
+
+    
+}
+
+.lateral {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 160px;
+    background-color: aquamarine;
+}
+.lateral button {
+    margin-bottom: 440px;
+    
+}
+.lateral strong {
+    font-size: 40px;
+}
+
+.alfabeto {
+    margin: 10px 0;
+    width: 660px;
+    background-color: blueviolet;
+}
+
+.alfabeto button {
+    margin: 15px 10px;
+    width: 30px;
+    height: 30px;
+}
